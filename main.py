@@ -20,3 +20,22 @@ def get_by_category(name: str):
         "category": name,
         "headlines": [f"Sample headline in {name}", f"Another example in {name}"]
     }
+
+LABELS = [
+    # Core mainstream topics
+    "Government & Policy", "Civil Rights & Liberties", "Geopolitical Affairs",
+    "Economy", "Health", "Technology", "Environment",
+    "War", "Crime", "Education", "Science", "Culture",
+    "Business", "Entertainment", "Sports", "Opinion",
+
+    # Power & Control themes
+    "Surveillance", "Corporate Corruption", "Private Equity",
+    "Financial Manipulation", "Wealth Inequality", "Media Bias", "Deep State",
+    "Global Elites", "Military Industrial Complex", "Political Coverup",
+    "Social Engineering", "BlackRock", "JP Morgan", "Warfare Profiteering",
+    "Pharmaceutical Influence", "Censorship", "Disinformation"
+]
+
+@app.get("/categories")
+def get_categories():
+    return LABELS
